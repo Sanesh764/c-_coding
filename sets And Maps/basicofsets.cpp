@@ -27,8 +27,8 @@ int main() {
         cout<<"does,t exists eleement "<<endl;
     }
 
-    cout<<s.size()<<endl;
-    for(int ele : s){
+    cout<<"size of sets is "<<s.size()<<endl;
+    for(auto ele : s){
         cout<<ele<<" ";
     }
     return 0;

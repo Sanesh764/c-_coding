@@ -2,11 +2,11 @@
 using namespace std;
 int main(){
     class players{
-        private:
+    private:
         int score=80;
         int health=900;
 
-        public:
+    public:
         //setter
         void setscore(int s){
             score=s;

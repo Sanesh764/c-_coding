@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 class player{
-    private:
+private:
         int health;
         int age;
         int score;

@@ -24,13 +24,13 @@ void display(){
 int main() {
     cout<<"enter your size of vertex: ";
     cin>>v;
-    graph.resize(v);
+    graph.resize(v);//resize the graph into v
     int e;
     cout<<"enter your size of edges :";
     cin>>e;
     while (e--){
         int s,d,wt;
-        cout<<"enter source and destination ";
+        cout<<"enter source and destination and weight : ";
         cin>>s>>d>>wt;
         add_edge(s,d,wt);
     }

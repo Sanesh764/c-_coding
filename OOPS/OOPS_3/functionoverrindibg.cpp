@@ -16,7 +16,7 @@ class Bike :public Vehicle{
 public:
     int handlesize;
 
-    void show(){
+    void show() override{
         cout<<"Bike ka show\n"<<endl;
     }
 };

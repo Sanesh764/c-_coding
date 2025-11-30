@@ -3,12 +3,15 @@
 using namespace std;
 //also known as hash map or hashing
 int main() {
-   
+   //string is key and int is a value
     unordered_map<string,int> m;
+    //method 1 to inset an element
     pair<string,int> p1;
     p1.first="sanesh";
     p1.second=20;
     m.insert(p1);
+
+    //method 2
     m["santosh"]=45;
     m["suman"]=100;
     m["niranjan"]=12;

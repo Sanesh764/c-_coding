@@ -7,7 +7,7 @@ vector<list<pair<int ,int>>> graph;
 int v;//no of vertices
 void add_edge(int src,int dest,int wt,bool bi_dir=true){
     graph[src].push_back({dest,wt});    
-    if(bi_dir){
+    if(bi_dir==true){
         graph[dest].push_back({src,wt});
     }
 }

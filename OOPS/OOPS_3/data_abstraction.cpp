@@ -1,17 +1,18 @@
 #include<iostream>
 using namespace std;
-int main(){
-    //class is a blue print
+//class is a blue print
     /*
     private
     proceted
     public
     */
     class players{
-        public:
+    public:
         int score;//data member
         int health;
     };
+int main(){
+    
     players player[10];
     players sanesh;
     sanesh.score=79;
