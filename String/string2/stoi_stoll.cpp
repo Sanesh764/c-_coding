@@ -9,6 +9,8 @@ int main(){
     int a=1234567;
     string s=to_string(a);//it convert to integer to string
 
+    
+
     cout<<a;
 
 return 0;
