@@ -14,25 +14,25 @@ int main(){
     }
    }
    //wave
-//    for(int i=0;i<m;i++){
-//       if(i%2==0){
-//         for(int j=0;j<n;j++){
-//             cout<<arr[i][j]<<" ";
-//         }
-//       }
-//       else {//1,3,5
-//         for(int j=n-1;j>=0;j--){
-//             cout<<arr[i][j]<<" ";
-//         }
-//       }
-//    }
+   for(int i=0;i<m;i++){
+      if(i%2==0){
+        for(int j=0;j<n;j++){
+            cout<<arr[i][j]<<" ";
+        }
+      }
+      else {//1,3,5
+        for(int j=n-1;j>=0;j--){
+            cout<<arr[i][j]<<" ";
+        }
+      }
+   }
 
 //coloumwisw
 // printing'
-for(int j=0;j<n;j++){
-    for(int i=0;i<m;i++){
-        cout<<arr[i][j]<<" ";
-    }
-}
+// for(int j=0;j<n;j++){
+//     for(int i=0;i<m;i++){
+//         cout<<arr[i][j]<<" ";
+//     }
+// }
 
 }
