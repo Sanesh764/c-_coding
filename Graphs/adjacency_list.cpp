@@ -1,46 +1,3 @@
-#include<iostream>
-#include<vector>
-#include<list>
-using namespace std;
-
-void add_edge(vector<list<int>>& graph, int src, int dest, bool bi_dir = true) {
-    graph[src].push_back(dest);    
-    if (bi_dir) {
-        graph[dest].push_back(src);
-    }
-}
-
-void display(const vector<list<int>>& graph) {
-    for (int i = 0; i < graph.size(); i++) {
-        cout << i << " -> ";
-        for (auto el : graph[i]) {
-            cout<<"("<< el << ")";
-        }
-        cout << endl;
-    }
-}
-
-int main() {
-    int v;
-    cout << "Enter number of vertices: ";
-    cin >> v;
-
-    vector<list<int>> graph(v); // Resize the vector here
-
-    int e;
-    cout << "Enter number of edges: ";
-    cin >> e;
-
-    while (e--) {
-        int s, d;
-        cout << "Enter source and destination: ";
-        cin >> s >> d;
-        add_edge(graph, s, d);
-    }
-
-    display(graph);
-    return 0;
-}
 
 //undirected unweighted graph
 // #include<iostream>
@@ -82,3 +39,41 @@ int main() {
 //     graph.print();
 //     return 0;
 // }
+
+
+#include<iostream>
+#include<vector>
+#include<list>
+using namespace std;
+void add_edge(vector<list<int>>&graph,int src,int dest,bool bi_dir=true){
+    graph[src].push_back(dest);
+    if(bi_dir){
+        graph[dest].push_back(src);
+    }
+}
+void display(vector<list<int>>&graph){
+    for(int i=0;i<graph.size();i++){
+        cout<<i<<"->";
+        for(auto ele:graph[i]){
+            cout<<"("<<ele<<")"<<"->";
+        }
+        cout<<endl;
+    }
+}
+int main() {
+    int v;//no of vertex;
+    cout<<"enter no of vertex :";
+    cin>>v;
+    vector<list<int>>graph(v);
+    int e;
+    cout<<"enter no of edges :";
+    cin>>e;
+    while(e--){
+        int s,d;//source,destination
+        cout<<"enter source and destination :";
+        cin>>s>>d;
+        add_edge(graph,s,d,true);
+    }
+    display(graph);
+    return 0;
+}
