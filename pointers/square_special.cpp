@@ -4,7 +4,7 @@
 4 3 2 2 2 3 4
 4 3 2 1 2 3 4
 4 3 2 2 2 3 4
-4 3 3 3 3 3 4
+4 3 3 3 3 3 4 
 4 4 4 4 4 4 4
 */
 #include <iostream>
@@ -12,9 +12,10 @@
 using namespace std;
 int main() {
     int n = 4; // Change this value to adjust the number of rows
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-             int distance = min(min(i, j), min(n - i - 1, n - j - 1));
+    int size = 2*n - 1;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+             int distance = min(min(i, j), min(size - i - 1, size - j - 1));
             int value = n - distance;
             cout << value << " ";
         }

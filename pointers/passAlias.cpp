@@ -1,4 +1,5 @@
 #include<iostream>
+using namespace std;
 void swap(int &x,int &y){
     int temp =x;//pass by reference
     x=y;
@@ -6,7 +7,6 @@ void swap(int &x,int &y){
     return;
 //sasta method
 }
-using namespace std;
 int main(){
    int a,b;
    cout<<"enter your value of a and b :";
