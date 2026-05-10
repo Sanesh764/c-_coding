@@ -48,7 +48,7 @@ int main() {
     Node* b = new Node(20);
     Node* c = new Node(30);
     Node* d = new Node(40);
-    Node* e=new Node(50);
+    Node* e = new Node(50);
     a->next=b;
     b->next=c;
     c->next=d;
@@ -72,7 +72,6 @@ int main() {
     //displayrec(a);
     insertAtEnd(a,59);
     diplay(a);
-
     //cout<<"the size of linked list is :"<<size(a);
 
     return 0;

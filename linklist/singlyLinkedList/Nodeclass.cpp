@@ -21,7 +21,7 @@ int main() {
     c.next=&d;
     d.next=NULL;
 
-     cout<<&a<<endl;
+    cout<<&a<<endl;
     cout<<a.next<<endl;
     cout<<a.val<<endl;
 

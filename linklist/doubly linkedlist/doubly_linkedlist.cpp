@@ -7,8 +7,9 @@ public:
     node* prev;
     node(int val){
         this->val=val;
-        this->next=NULL;
-        this->prev=NULL;
+        // this->next=NULL;
+        // this->prev=NULL;
+        next=prev=nullptr;
     }
 };
 void display(node* head){

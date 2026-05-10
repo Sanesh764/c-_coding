@@ -44,7 +44,7 @@ public:
             Node* t=new Node(val);
             Node* temp=head;
             for(int i=0;i<idx-1;i++){
-                temp=temp->next;;
+                temp=temp->next;; 
             }    
             t->next=temp->next;
             temp->next=t;
