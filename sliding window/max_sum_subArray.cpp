@@ -49,7 +49,7 @@ int main() {
 
     // Initialize variables
     int maxSum = INT_MIN;   // To store the maximum sum
-    int currentSum = 0;     // To store the current window sum
+    int currentSum = 0;      // To store the current window sum
     int startIndex = 0;     // Starting index of the max sum window
 
     // Calculate the sum of the first window
