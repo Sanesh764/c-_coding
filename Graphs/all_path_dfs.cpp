@@ -70,8 +70,7 @@
 using namespace std;
 
 void dfs(int curr, int end, const vector<vector<int>>& graph, vector<bool>& visited,
-         vector<int>& path, vector<vector<int>>& result) {
-    
+    vector<int>& path, vector<vector<int>>& result) {
     path.push_back(curr);
     visited[curr] = true;
 
