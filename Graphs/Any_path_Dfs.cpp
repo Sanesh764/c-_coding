@@ -18,7 +18,8 @@ bool dfs(int curr,int end){
     if(curr==end) return true;
     visited.insert(curr);//mark as visited
     for(auto neighbour: graph[curr]){
-        if(!visited.count(neighbour)){
+        //count sirf ye batata h ki perticular value exist karta h ya nhi agar karta h to return 1 else return 0
+        if(!visited.count(neighbour)){//particular node if not visited then dfs call karo
             bool result=dfs(neighbour,end);
             if(result) return true;
         }

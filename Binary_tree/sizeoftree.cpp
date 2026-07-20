@@ -42,7 +42,7 @@ int main() {
     c->right=g;
     diplayTree(a);
     cout<<endl;
-    cout<<size(a);
+    cout<<"size of the tree is "<<size(a);
     cout<<endl;
     cout<<levels(a);
     return 0;
