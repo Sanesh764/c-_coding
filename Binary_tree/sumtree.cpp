@@ -24,6 +24,7 @@ int sum(Node* root){
     int ans=root->val + leftsum + rightsum;
     return ans;
 }
+
 int main() {
     Node* a=new Node(1);
     Node* b=new Node(2);
