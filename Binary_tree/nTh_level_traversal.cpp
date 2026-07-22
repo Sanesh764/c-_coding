@@ -11,22 +11,16 @@ public:
         this->right=nullptr;
     }
 };
-void diplayTree(Node* root){
+void nthLevel(Node* root,int curr,int level){
     if(root==nullptr) return;
-    cout<<root->val<<" ";
-    diplayTree(root->left);
-    diplayTree(root->right);
+    if(curr==level){
+        cout<<root->val<<" ";
+    }
+    nthLevel(root->left,curr+1,level);
+    nthLevel(root->right,curr+1,level);
 }
-int size(Node* root){
-    if(root==nullptr) return 0;
-    int left=size(root->left);
-    int right=size(root->right);
-    return 1 +left+right;
-}
-int levels(Node* root){
-    if(root==nullptr) return 0;
-    return 1 +max(levels(root->left),levels(root->right));
-}
+
+
 int main() {
     Node* a=new Node(1);
     Node* b=new Node(2);
@@ -42,11 +36,6 @@ int main() {
     b->right=e;
     c->left=f;
     c->right=g;
-    diplayTree(a);
-    cout<<endl;
-    cout<<"size of the tree is "<<size(a);
-    cout<<endl;
-    cout<<levels(a);
+    nthLevel(a,0,2);
     return 0;
-
 }
