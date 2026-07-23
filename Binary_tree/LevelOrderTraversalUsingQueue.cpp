@@ -13,7 +13,7 @@ public:
     }
 };
 
-void levelOrderQueue(Node* root){
+void levelOrderQueue(Node* root){//this technique is know as BFS
     queue<Node*>q;
     q.push(root);
     while(!q.empty()){
