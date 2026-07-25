@@ -25,6 +25,8 @@ void nthLevel(Node* root,int curr,int level){
     nthLevel(root->left,curr+1,level);
     nthLevel(root->right,curr+1,level);
 }
+
+
 //right to left
 void nthLevel2(Node* root,int curr,int level){
     if(root==nullptr) return;
