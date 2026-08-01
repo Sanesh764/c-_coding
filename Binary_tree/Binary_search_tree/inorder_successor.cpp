@@ -11,6 +11,7 @@ public:
         this->right=nullptr;
     }
 };
+  
 
 int inorder_successor(Node* root){
     if(root->right==nullptr) return 0;
