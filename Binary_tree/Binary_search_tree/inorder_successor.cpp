@@ -13,6 +13,8 @@ public:
 };
   
 
+//this is inorder-successory
+
 int inorder_successor(Node* root){
     if(root->right==nullptr) return 0;
     Node* succ=root->right;
