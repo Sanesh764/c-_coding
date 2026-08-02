@@ -22,6 +22,7 @@ int inorder_predecessor(Node* root){
     
 }
 
+//important
 int main() {
     Node* a=new Node(10);
     Node* b=new Node(5);
