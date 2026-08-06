@@ -1,3 +1,52 @@
+
+
+
+// LeetCode 1804: Implement Trie II (Prefix Tree)
+// Problem Statement
+
+// A Trie (Prefix Tree) is a tree-like data structure used to efficiently store and retrieve strings.
+
+// Implement the Trie class with the following functions:
+
+// Functions
+// Trie()
+
+// Initializes the Trie object.
+
+// void insert(String word)
+
+// Inserts the string word into the Trie.
+
+// int countWordsEqualTo(String word)
+
+// Returns the number of times the exact word has been inserted into the Trie.
+
+// int countWordsStartingWith(String prefix)
+
+// Returns the number of words in the Trie that have the given prefix.
+
+// void erase(String word)
+
+// Erases one occurrence of the word from the Trie.
+
+// It is guaranteed that the word exists in the Trie before erase() is called.
+
+// Example
+// Input
+// ["Trie","insert","insert","countWordsEqualTo","countWordsStartingWith","erase","countWordsEqualTo","countWordsStartingWith"]
+
+// [[],
+// ["apple"],
+// ["apple"],
+// ["apple"],
+// ["app"],
+// ["apple"],
+// ["apple"],
+// ["app"]]
+// Output
+// [null,null,null,2,2,null,1,1]
+
+
 #include <iostream>
 #include <unordered_map>
 using namespace std;
