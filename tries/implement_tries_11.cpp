@@ -46,6 +46,17 @@
 // Output
 // [null,null,null,2,2,null,1,1]
 
+// Constraints
+// 1 <= word.length, prefix.length <= 2000
+
+// word and prefix consist only of lowercase English letters.
+
+// At most 3 × 10^4 calls will be made to insert,
+// countWordsEqualTo,
+// countWordsStartingWith,
+// and erase.
+
+// It is guaranteed that erase(word) will be called only if the word exists in the Trie.
 
 #include <iostream>
 #include <unordered_map>
