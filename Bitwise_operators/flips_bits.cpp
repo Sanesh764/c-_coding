@@ -1,21 +1,16 @@
 #include<iostream>
 using namespace std;
-int max_power_of2(int n){
-    n=n |(n>>1);
-    n=n |(n>>2);
-    n=n |(n>>4);
-    n=n |(n>>8);
-    n=n |(n>>16);
-    return (n+1)>>1;
+int Flip_bits(int n){
+    int x=n;
+    x=x |(x>>1);
+    x=x |(x>>2);
+    x=x |(x>>4);
+    x=x |(x>>8);
+    x=x |(x>>16);
+    return (x^n);
 }
+//if the input is 7 => 111 then output becomes 000
 int main(){
-    int x=90;
-    int temp;
-    while(x!=0){
-        temp=x;
-        x=x&(x-1);
-    }
-    cout<<temp<<endl;
-    int y=23;
-    cout<<max_power_of2(y)<<"\n";
+    int y=9;
+    cout<<Flip_bits(y)<<"\n";
 }
