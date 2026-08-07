@@ -10,7 +10,7 @@ string decimal_to_binary(int n){
             //odd
             result = "1"+result;
         }
-        n =n/2;
+        n =n>>2;//right shift
     }
     return result;
 }
