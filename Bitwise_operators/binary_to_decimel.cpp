@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int Binary_to_desimal(string &str){
+int Binary_to_decimal(string &str){
     int n=str.size();
     int result=0;
     for(int i=n-1;i>=0;i--){
@@ -13,5 +13,5 @@ int Binary_to_desimal(string &str){
 int main(){
     string str="0111";
     cout<<"the given binary number "<<str<<" of desimal value is : -> ";
-    cout<<Binary_to_desimal(str)<<endl;
+    cout<<Binary_to_decimal(str)<<endl;
 }
