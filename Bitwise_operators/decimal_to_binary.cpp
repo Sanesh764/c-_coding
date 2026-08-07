@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-string desimal_to_binary(int n){
+string decimal_to_binary(int n){
     string result="";
     while(n>0){
         if(n%2==0){//even
@@ -18,5 +18,5 @@ int main(){
     int n;
     cout<<"enter your number to convert desimal to binary :";
     cin>>n;
-    cout<<desimal_to_binary(n)<<endl;
+    cout<<decimal_to_binary(n)<<endl;
 }
