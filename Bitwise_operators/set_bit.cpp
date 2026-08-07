@@ -8,6 +8,8 @@ using namespace std;
 int count_set_bits(int n){
     return  __builtin_popcount(n);
 }
+
+ 
 //khud ka logics
 int count_set_bits2(int n){
     int count=0;

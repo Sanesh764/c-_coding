@@ -15,7 +15,8 @@ int main(){
         temp=x;
         x=x&(x-1);
     }
-    cout<<temp<<endl;
+    cout<<"just smaller then the given number which is power is 2 is : "<<temp<<endl;
+     cout<<"just greather then the given number which is power is 2 is : "<<2*temp<<endl;
     int y=23;
     cout<<max_power_of2(y)<<"\n";
 }
