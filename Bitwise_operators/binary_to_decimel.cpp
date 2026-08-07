@@ -11,7 +11,7 @@ int Binary_to_decimal(string &str){
     return result;
 }
 int main(){
-    string str="0111";
+    string str="1111111";
     cout<<"the given binary number "<<str<<" of desimal value is : -> ";
     cout<<Binary_to_decimal(str)<<endl;
 }
