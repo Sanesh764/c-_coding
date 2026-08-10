@@ -57,14 +57,12 @@ int main() {
         cin >> x;
         vertical.push_back(x);
     }
-
     cout << "Enter horizontal cut costs (" << n-1 << " values):\n";
     for (int i = 0; i < n-1; i++) {
         ll x;
         cin >> x;
         horizontal.push_back(x);
     }
-
     cout << mincostToBreakGrid(n, m, vertical, horizontal) << "\n";
 
     return 0;
