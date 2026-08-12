@@ -11,15 +11,12 @@ int f(int x){
     if(dp[x] != -2) return dp[x];
     int result = INT_MAX;
     for(int i = 0; i < coins.size(); i++){
-        int c = coins[i];
-        if(x - c >= 0){
-            int sub = f(x - c);
-            if(sub != INT_MAX){
-                result = min(result, 1 + sub);
-            }
-        }
+        if(x-coins[i]<0) continue;
+
+        result=min(result,f(x-coins[i]));
     }
-    return dp[x] = result;
+    if(result==INT_MAX) return dp[x]=INT_MAX;
+    return dp[x] =1+ result;
 }
 int main() {
     int n, x;
@@ -32,7 +29,6 @@ int main() {
     int ans = f(x);
     if(ans == INT_MAX) cout << "-1\n";
     else cout << ans << "\n";
-
     return 0;
 }
 
