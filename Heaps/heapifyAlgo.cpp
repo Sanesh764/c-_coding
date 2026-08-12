@@ -33,8 +33,7 @@ void heapify(int i,int arr[],int n){
         }
     }
     
-}
-
+};
 int main() {
     int arr[]={-1,10,2,14,11,1,4};
     int n=sizeof(arr)/sizeof(arr[0]);

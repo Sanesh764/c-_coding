@@ -6,8 +6,7 @@ using namespace std;
 #define inf INT_MAX
 
 int f(int n) {
-    if (n == 1) return 1;
-    if (n == 2 || n == 3) return 1;
+    if (n == 1) return 0;
     int a = f(n - 1);
     int b = (n % 2 == 0) ? f(n / 2) : inf;
     int c = (n % 3 == 0) ? f(n / 3) : inf;
@@ -17,8 +16,7 @@ int f(int n) {
 vector<int>dp;
 
 int ftd(int i) {
-    if (i == 1) return 1;
-    if (i == 2 || i == 3) return 1;
+    if (i == 1) return 0;
     if(dp[i]!=-1) return dp[i];//nth state is precomuted
     //if(dp[n] is -1 we need t compure first time this state
     int a = ftd(i - 1);
