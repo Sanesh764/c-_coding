@@ -1,24 +1,24 @@
-// // Maximum Secure Logs After Dividing Into K Parts — EXACT solution.
-// //
-// // Correctness basis:
-// //   Lemma (empirically verified against full partition enumeration,
-// //   0 mismatches / 435+ exhaustive tiny cases): for a FIXED number of
-// //   parts t_i taken from element i, the split that maximizes the sum
-// //   of the smallest k/2 values in the final pool is the BALANCED split
-// //   (parts of floor(v_i/t_i) and ceil(v_i/t_i)).
-// //
-// //   Given that lemma, the only remaining decision is which t_i vector
-// //   (0 <= t_i <= v_i, sum t_i = k) to choose. No polynomial method for
-// //   that sub-problem was found to be correct (see write-up) — binary
-// //   search on a single threshold M provably fails, and the natural
-// //   "balance everything" greedy also fails, because the objective
-// //   (sum of smallest k/2) is not majorization-monotonic the way
-// //   "maximize the minimum" is. So this solves that choice by exact
-// //   search with pruning.
-// //
-// // Complexity: exponential in n (number of elements). Practical for
-// // small n (roughly n <= 15-18 depending on k). NOT suitable for large
-// // n — flagged honestly, not hidden.
+// Maximum Secure Logs After Dividing Into K Parts — EXACT solution.
+//
+// Correctness basis:
+//   Lemma (empirically verified against full partition enumeration,
+//   0 mismatches / 435+ exhaustive tiny cases): for a FIXED number of
+//   parts t_i taken from element i, the split that maximizes the sum
+//   of the smallest k/2 values in the final pool is the BALANCED split
+//   (parts of floor(v_i/t_i) and ceil(v_i/t_i)).
+//
+//   Given that lemma, the only remaining decision is which t_i vector
+//   (0 <= t_i <= v_i, sum t_i = k) to choose. No polynomial method for
+//   that sub-problem was found to be correct (see write-up) — binary
+//   search on a single threshold M provably fails, and the natural
+//   "balance everything" greedy also fails, because the objective
+//   (sum of smallest k/2) is not majorization-monotonic the way
+//   "maximize the minimum" is. So this solves that choice by exact
+//   search with pruning.
+//
+// Complexity: exponential in n (number of elements). Practical for
+// small n (roughly n <= 15-18 depending on k). NOT suitable for large
+// n — flagged honestly, not hidden.
 
 // #include <bits/stdc++.h>
 // using namespace std;
