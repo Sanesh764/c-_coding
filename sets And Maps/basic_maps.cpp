@@ -11,6 +11,10 @@ int main() {
     p1.second=20;
     m.insert(p1);
 
+
+
+
+    
     //method 2
     m["santosh"]=45;
     m["suman"]=100;
