@@ -10,27 +10,34 @@ void add_edge(vector<unordered_map<int,int> >&graph,int src,int dest,int wt, boo
     }
 }
 
-bool dfs(int src,int parent,unordered_set<int>&vis){
+bool bfs(int src){
+    unordered_set<int>vis;
+    queue<int>qu;
+    vector<int>par(v,-1);
+    qu.push(src);
     vis.insert(src);
-    for( auto neighbour : graph[src]){
-        if(vis.count(neighbour.first) && neighbour.first!=parent){
-            cout<<"cycle detected"<<endl;
-            return true;//cycle detected
-        }
-        if(!vis.count(neighbour.first)){
-           bool res= dfs(neighbour.first,src,vis);
-           if(res==true) return true;
+    while(!qu.empty()){
+        int curr=qu.front();
+        qu.pop();
+        for(auto neighbour :graph[curr]){
+            if(vis.count(neighbour.first) && par[curr]!=neighbour.first) return true;
+            if(!vis.count(neighbour.first)){
+                vis.insert(neighbour.first);
+                par[neighbour.first]=curr;
+                qu.push(neighbour.first);
+            }
         }
     }
     return false;
 }
+
 
 bool has_cycle(){
     unordered_set<int>visited;
     bool result=false;
     for(int i=0;i<v;i++){
         if(!visited.count(i)){
-            result=dfs(i,-1,visited);
+            result=bfs(i);
             if(result==true) return  true;
         }
     }
