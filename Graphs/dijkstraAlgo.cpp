@@ -2,9 +2,10 @@
 #include <vector>
 #include <queue>
 #include <climits>
+#define pp pair<int,int>
 using namespace std;
 
-vector<vector<pair<int, int>>> graph;
+vector<vector<pp>> graph;
 int v;
 
 // src -> dest (weight)
@@ -16,11 +17,7 @@ void add_edge(int src, int dest, int wt, bool bi_dir = true) {
 }
 vector<int> dijkstraAlgo(int src) {
     vector<int> dist(v, INT_MAX);
-    priority_queue<
-        pair<int, int>,
-        vector<pair<int, int>>,
-        greater<pair<int, int>>
-    > pq;
+    priority_queue<pp,vector<pp>,greater<pp>> pq;
 
     dist[src] = 0;
     pq.push({0, src});
