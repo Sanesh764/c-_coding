@@ -9,12 +9,6 @@ int main(){
     }
     //insertation sort
     for(int i=1;i<=n-1;i++){
-        /*i start from 2nd element of the array.
-        and comapre if arr[j]>=arr[j-1] then you break the while loop
-        other wise you swap(arr[j],arr[j-1]);
-        after swapping we decrease j--;
-        and again compare 
-        */
         int j=i;
         while(j>=1){
             if(arr[j]>=arr[j-1]) break;
